@@ -1,0 +1,17 @@
+.DS_Store
+
+# latex build
+*.acn
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.glo
+*.glsdefs
+*.ist
+*.lof
+*.log
+*.lot
+*.xml
+*.gz
+*.toc

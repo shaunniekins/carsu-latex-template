@@ -1,0 +1,68 @@
+% !TeX root = thesis.tex
+% !TeX program = xelatex  % Or lualatex
+
+\documentclass[12pt]{gatechthesis}
+
+% preamble
+\usepackage{wrapfig}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{fontspec}
+\setmainfont{Candara}[
+  Path = fonts/Candara/,
+  Extension = .ttf,
+  UprightFont = *,
+  BoldFont = *_Bold,
+  ItalicFont = *_Italic,
+  BoldItalicFont = *_Bold_Italic
+]
+
+\setlength{\headheight}{14.5pt}
+\addtolength{\topmargin}{-2.5pt}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,positioning,fit,calc}
+
+\usepackage{graphicx}
+\graphicspath{{figures/}{images/}}
+
+\usepackage{ifthen}
+\newcommand{\inputifexists}[1]{%
+  \IfFileExists{#1}{\input{#1}}{\typeout{Warning: File #1 does not exist.}}%
+}
+
+\usepackage{adjustbox}
+
+\title{<Thesis or Capstone Title>}
+\author{<Student Name> \\ <Student Name>}
+
+\bibliography{references}
+
+\begin{document}
+
+\makeTitlePage{<Month>}{<Year>}
+
+\begin{frontmatter}
+  \inputifexists{sections/approvalPage}
+  \inputifexists{sections/dedication}
+  \inputifexists{sections/acknowledgment}
+  \makeTOC
+  \makeListOfFigures
+  \makeListOfTables
+  \input{sections/abstract}
+  \inputifexists{sections/abbrevs}
+  \makeListOfAcronyms
+\end{frontmatter}
+
+\begin{thesisbody}
+  \input{chapters/chapter1}
+  \input{chapters/chapter2}
+  \input{chapters/chapter3}
+  \input{chapters/chapter4}
+  \input{chapters/chapter5}
+  \makeBibliography
+  \inputifexists{sections/appendix}
+  \inputifexists{sections/bionote}
+\end{thesisbody}
+
+\end{document}
