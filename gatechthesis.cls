@@ -137,7 +137,7 @@
       \@title\\
       \vspace{6\baselineskip}
 
-      A [Capstone or Thesis] by\\
+      A <Thesis or Capstone> by\\
       \vspace{6\baselineskip}
 
       \@author\\
