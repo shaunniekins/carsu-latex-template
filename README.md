@@ -50,6 +50,26 @@ To compile the document (especially with `biblatex` and `glossaries`):
 
 Most LaTeX editors like TeXstudio, Overleaf, or VS Code with LaTeX Workshop extension can handle this automatically or be configured to do so.
 
+## PAPER SIZE SETTINGS
+
+The default paper size for this template is **US Letter (8.5" × 11")**.
+
+To change the paper size:
+
+1. Open `gatechthesis.cls`
+2. Find the `geometry` package settings (around line 7):
+
+   ```tex
+   \RequirePackage[letterpaper, left=1.5in, right=1in, top=1in, bottom=1in]{geometry}
+   ```
+
+3. Replace `letterpaper` with your desired paper size:
+   - For A4 paper: `a4paper`
+   - For Legal paper: `legalpaper`
+   - For Executive paper: `executivepaper`
+
+You can also modify the margins as needed by changing the `left`, `right`, `top`, and `bottom` values.
+
 ## RECOMMENDED ORGANIZATION
 
 For better organization:
