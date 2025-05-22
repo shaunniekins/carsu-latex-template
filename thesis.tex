@@ -6,6 +6,7 @@
 % preamble
 \usepackage{wrapfig}
 \usepackage{pgfplots}
+\usepackage{indentfirst}
 \pgfplotsset{compat=1.18}
 \usepackage{fontspec}
 \setmainfont{Candara}[
@@ -16,15 +17,16 @@
   ItalicFont = *_Italic,
   BoldItalicFont = *_Bold_Italic
 ]
-
-\setlength{\headheight}{14.5pt}
-\addtolength{\topmargin}{-2.5pt}
+\usepackage{microtype}
+\usepackage{xurl}
+\usepackage{listings}
+\lstset{breaklines=true}
 
 \usepackage{tikz}
 \usetikzlibrary{arrows,shapes,positioning,fit,calc}
 
 \usepackage{graphicx}
-\graphicspath{{figures/}{images/}}
+\graphicspath{{figures/}}
 
 \usepackage{ifthen}
 \newcommand{\inputifexists}[1]{%
@@ -32,6 +34,9 @@
 }
 
 \usepackage{adjustbox}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{ragged2e}
 
 \title{<Thesis or Capstone Title>}
 \author{<Student Name> \\ <Student Name>}
