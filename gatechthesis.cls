@@ -387,6 +387,7 @@
 \newenvironment{bionote}
 {
   \clearpage
+  \thispagestyle{empty}
   \phantomsection
   \addcontentsline{toc}{chapter}{BIONOTE}
   \begin{centering}
@@ -397,5 +398,3 @@
 {
   \clearpage
 }
-
-\endinput
